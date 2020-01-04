@@ -16,6 +16,7 @@
 		A5D2247122C7B93700F66B46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5D2246F22C7B93700F66B46 /* LaunchScreen.storyboard */; };
 		A5D2247C22C7B93700F66B46 /* YouTubeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2247B22C7B93700F66B46 /* YouTubeTests.swift */; };
 		A5D2248722C7B93700F66B46 /* YouTubeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5D2248622C7B93700F66B46 /* YouTubeUITests.swift */; };
+		ECED0E3523C0D37200ADB3E3 /* MenuCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED0E3423C0D37200ADB3E3 /* MenuCellCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		A5D2248222C7B93700F66B46 /* YouTubeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YouTubeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D2248622C7B93700F66B46 /* YouTubeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeUITests.swift; sourceTree = "<group>"; };
 		A5D2248822C7B93700F66B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECED0E3423C0D37200ADB3E3 /* MenuCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				A508055922CB7F260081D960 /* VideoCell.swift */,
 				A508FA6322CCBF390082305C /* MenuBar.swift */,
+				ECED0E3423C0D37200ADB3E3 /* MenuCellCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECED0E3523C0D37200ADB3E3 /* MenuCellCollectionViewCell.swift in Sources */,
 				A5D2246922C7B93600F66B46 /* HomeController.swift in Sources */,
 				A508055A22CB7F260081D960 /* VideoCell.swift in Sources */,
 				A508055722CB7E320081D960 /* Extensions.swift in Sources */,

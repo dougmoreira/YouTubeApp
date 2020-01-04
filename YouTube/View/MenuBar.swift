@@ -21,27 +21,33 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }()
     
     let cellID = "CellID"
+    let imageNames = ["home", "account", "subscriptions"]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        collectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.register(MenuCellCollectionViewCell.self, forCellWithReuseIdentifier: cellID)
         addSubview(collectionView)
         addConstraintsWithFormat("H:|[v0]|", views: collectionView)
         addConstraintsWithFormat("V:|[v0]|", views: collectionView)
         
+        let selecterdIdexPath = NSIndexPath(item: 0, section: 0)
+        collectionView.selectItem(at: selecterdIdexPath as IndexPath, animated: false, scrollPosition: .centeredHorizontally)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! MenuCellCollectionViewCell
+        cell.imageView.image = UIImage(named: imageNames[indexPath.item])?.withRenderingMode(.alwaysTemplate)
+        cell.tintColor = UIColor.rgb(red: 91, green: 14, blue: 13)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: frame.width / 4, height: frame.height)
+        return CGSize(width: frame.width / 3, height: frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -53,19 +59,3 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     }
 }
 
-class MenuCell: BaseCell {
-    
-    let imageView: UIImageView = {
-        let iv = UIImageView()
-        iv.image = UIImage(named: "")
-        return iv
-    }()
-    
-    
-    override func setupViews() {
-        super.setupViews()
-        
-        backgroundColor = .yellow
-    }
-
-}
